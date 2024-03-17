@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  width: 100vw;
+  padding: 0 20px;
+  background-color: blue;
+}
+
+.menu {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 220px;
+  height: 220px;
+  padding-top: 25px;
+  padding-left: 35px;
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+
+.menu--entering {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu--entered {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.menu--exiting {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu--exited {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.menu_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  opacity: 1;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu--entered .menu_list {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.menu--exiting .menu_list {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.menu_item {
+  margin: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+.menu_button {
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid black;
+  cursor: pointer;
+}
